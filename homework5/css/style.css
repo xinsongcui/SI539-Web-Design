@@ -1,0 +1,262 @@
+/***** STARTER CODE - DO NOT CHANGE *****/
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  background-color: #737373;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 50px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+nav ul{
+  list-style-type: none;
+}
+
+nav li{
+  display: inline;
+  padding-right: 20px;
+}
+
+nav{
+  background-color: #ddd;
+  padding: 25px 0;    
+  text-align: left;   
+}
+
+header p{
+  color: white;
+  font-size: 24px;
+  padding: 0 100px;
+  text-align: center;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  padding-top: 30px;
+  text-align: center;
+}
+
+
+
+
+/*****  End Starter Code ****/
+
+nav a{
+  color: black;
+  font-weight: bold;
+  /* Requirement 1 code here*/
+  text-decoration: none;
+}
+
+/* Requirement 2 code here*/
+
+nav a:hover{
+  text-decoration: underline;
+}
+
+
+.skip a {
+  background: white;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+
+  /* Requirement 3a code here*/
+  position: absolute;
+  top: -40px;
+}
+
+/* Requirement 3b code here*/
+.skip a:focus {
+  top: 0px;
+}
+
+/* Requirement 4 code here*/
+*:focus {
+  border: 2px solid;
+}
+
+
+.container{
+  /* Requirement 5 code here*/
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-row-gap: 15px;
+
+}
+
+/* Remainder of requirements here: */
+
+header{
+  background-attachment: fixed; /* Parallax effect */
+  background-position: center; /* Parallax effect */
+  background-size: cover; /* Parallax effect */
+  color: white;
+  height: 400px; /* Parallax effect */
+
+  /* YOUR CODE HERE; */
+  background-image: url("../images/header.jpg");
+  background-repeat: no-repeat;
+  grid-column: 1 / -1;
+  grid-row: 1 / span 1;
+
+}
+
+
+.about-image{
+  grid-column: 1 / -1;
+  grid-row: 2 / span 1;
+  max-height: 700px;
+  overflow: hidden;
+}
+
+.about{
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.method-image{
+  grid-column: 1 / -1;
+  grid-row: 3 / span 1;
+  max-height: 700px;
+  overflow: hidden;
+}
+
+.method{
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+
+/* You need to write some of your own selectors here */
+
+.clients-image{
+  grid-column: 1 / -1;
+  grid-row: 4 / span 1;
+  max-height: 700px;
+  overflow: hidden;
+}
+
+.clients{
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1;
+}
+
+.contact-image{
+  grid-column: 1 / -1;
+  grid-row: 5 / span 1;
+  max-height: 700px;
+  overflow: hidden;
+}
+
+.contact{
+  grid-column: 2 / span 1;
+  grid-row: 5 / span 1;
+}
+
+
+
+
+.text-block{
+  background-color: rgba(255, 255, 255, .8);
+  border: 10px solid black;
+  padding: 30px;
+
+  /* Your code here */
+  place-self: center;
+}
+
+@media screen and (min-width: 800px){
+  nav{
+    padding: 30px 0;
+
+    /* Your code here */
+    text-align:right;
+  }
+
+  .container{
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 400px 400px 400px 400px 400px;
+  }
+  
+  .about-image{
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+  }
+
+  .about{
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 1;
+  }
+
+  .method-image{
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 1;
+  }
+
+  .method{
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 1;
+  }
+
+  .clients-image{
+    grid-column: 2 / span 2;
+    grid-row: 4 / span 1;
+  }
+
+  .clients{
+    grid-column: 3 / span 2;
+    grid-row: 4 / span 1;
+  }
+
+  .contact-image{
+    grid-column: 3 / span 2;
+    grid-row: 5 / span 1;
+  }
+
+  .contact{
+    grid-column: 2 / span 2;
+    grid-row: 5 / span 1;
+  }
+
+}
+
+
+/** Code for prefers reduced motion **/
+/* Make no changes below this line.
+   *************************************** 
+   */
+@media screen and (prefers-reduced-motion: reduce){
+  /*Turn off scroll*/
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  /*Turn off transition*/
+  .skip a{
+    -webkit-transition: initial; /* sets to default setting */
+    transition: initial; /* sets to default setting */
+  }
+
+  /*Turn off parallax*/
+  header{
+    background-attachment: initial;
+  }
+}
