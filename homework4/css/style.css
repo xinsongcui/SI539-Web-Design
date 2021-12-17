@@ -1,0 +1,135 @@
+/*STARTER CODE*/
+
+/*
+We have started some of the selectors for you.
+For others we have provided hints on what the selectors should be.
+There are some missing selectors.
+Make sure to learn what the starter code does!!
+*/
+
+/*STARTER CODE - DO NOT CHANGE*/
+main{
+  margin-bottom: 100px;
+}
+
+caption{
+  margin:5px 0px;
+}
+
+/* If you decide to uncomment this code, comment it back for the Autograder. */
+/* tr{
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+} */
+
+/*END STARTER CODE*/
+
+body{
+  color: #000000;
+  font-size: 16px;
+  margin: 1.2em;
+  background-size: cover;
+  background-position: center;
+
+  /*Req 1*/
+  font-family: 'Andika', sans-serif;
+  background-color: #DDDDDD;
+  background-image: url("../images/pigeon-background.JPEG");
+  background-repeat: no-repeat;
+}
+
+h1{
+  color: #c12258;
+  font-size: 2em;
+
+  /*Req 2*/
+  font-size: 32px;
+  text-align: center;
+  line-height: 2;
+}
+
+p{
+  padding-top: 15px;
+}
+
+a{
+  font-size: 16px;
+  color: #B21F50;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+/*Req 5*/
+/*Add selector and rule here*/
+*:hover {
+  border:  3px dashed #417243;
+}
+
+
+td{
+  text-align: center;
+  border-top: 2px solid #000000;
+  padding: 10px;
+}
+
+
+.colhead{
+  color: #FFFFFF;
+  background-color: #7e0825;
+  text-transform: uppercase;
+  padding: 10px;
+  min-width: 125px;
+  vertical-align: middle;
+}
+
+.rowhead{
+  vertical-align: middle;
+  border-top: 2px solid #000000;
+  border-right: 2px solid #000000;
+}
+
+
+table{
+    border: 5px solid #000000;
+    margin-left:auto; 
+    margin-right:auto;
+    border-radius: 50px;
+}
+
+tr:nth-child(even) {
+  background-color: #D1D1D1;
+}
+
+tr:hover {
+  background-color: rgba(126, 8, 37, 0.25);
+}
+
+/* I gave you the selector, but not the property-value pair. 
+You can use Inspect Element or your editor to find selectors. */
+thead tr:first-child th:first-child{
+  border-top-left-radius: 50px;
+}
+
+/*Add selectors and rules here*/
+thead tr:first-child th:last-child{
+  border-top-right-radius: 50px;
+}
+
+tbody tr:last-child th:first-child{
+  border-bottom-left-radius: 50px;
+}
+
+tbody tr:last-child td:last-child{
+  border-bottom-right-radius: 50px;
+}
+
+footer{
+  width:100%;
+  min-height: 75px;
+  background:#000000;
+  text-align:center;
+  color: #FFFFFF;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+}
